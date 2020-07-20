@@ -47,7 +47,7 @@ export const ListOfCategories = () => {
     <List fixed= {fixed}>
       {
       loading ? (<ReactLoading type= 'spokes' color= "#000000"/>) :
-       categories.map(category => <Items key={category.id}><Category {...category} /></Items>)
+       categories.map(category => <Items key={category.id}><Category {...category} path = {`/pet/${category.id}`} /></Items>)
       }
     </List>
   )
